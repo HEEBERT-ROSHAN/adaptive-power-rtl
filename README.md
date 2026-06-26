@@ -29,7 +29,7 @@ A low-power RTL architecture that monitors signal switching activity at runtime 
 - ## Simulation Results
 
 ### Clock Gating Waveform
-![CLK_EN Gating Behavior](docs/waveform.png)
+![CLK_EN Gating Behavior](waveform.png)
 
 **Observation:** `clk_en` signal deasserts during low-activity idle periods,
 reducing dynamic switching. Counter-based predictor correctly identifies
