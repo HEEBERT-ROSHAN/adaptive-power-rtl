@@ -31,6 +31,14 @@ A low-power RTL architecture that monitors signal switching activity at runtime 
 ### Clock Gating Waveform
 ![CLK_EN Gating Behavior](waveform.png)
 
+### Key Metrics
+| Parameter | Value |
+|---|---|
+| Simulation Duration | 650 ns |
+| Clock Period | ~10 ns |
+| Idle Detection Window | 4 cycles (saturating counter) |
+| clk_en Gating | Deasserts during low-activity idle periods |
+
 **Observation:** `clk_en` signal deasserts during low-activity idle periods,
 reducing dynamic switching. Counter-based predictor correctly identifies
 idle windows and suppresses unnecessary clock edges.
