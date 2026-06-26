@@ -26,6 +26,15 @@ A low-power RTL architecture that monitors signal switching activity at runtime 
 - `clk_en` — Adaptive clock enable
 - `counter` — Activity prediction counter
 
+- ## Simulation Results
+
+### Clock Gating Waveform
+![CLK_EN Gating Behavior](docs/waveform.png)
+
+**Observation:** `clk_en` signal deasserts during low-activity idle periods,
+reducing dynamic switching. Counter-based predictor correctly identifies
+idle windows and suppresses unnecessary clock edges.
+
 ## Tools
 - Simulation: Vivado / ModelSim / Icarus Verilog
 - Target: FPGA / ASIC
